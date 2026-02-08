@@ -5,6 +5,11 @@
 <title>Beatora Vibes | Official Music</title>
 
 <style>
+/* ===== RESET ===== */
+*{
+  box-sizing:border-box;
+}
+
 /* ===== GLOBAL ===== */
 body{
   margin:0;
@@ -12,70 +17,87 @@ body{
   background:#0b0b12;
   color:white;
   text-align:center;
+  line-height:1.5;
 }
 
 /* ===== HEADER ===== */
 header{
-  padding:60px 20px;
+  padding:40px 15px;
   background: radial-gradient(circle at center,#1a0033,#000814);
 }
 
 .logo{
-  width:100px;
-  max-width:85%;
-  filter: drop-shadow(0 0 25px #6a00ff);
+  width:90px;
+  max-width:100%;
+  filter: drop-shadow(0 0 18px #6a00ff);
 }
 
 .tagline{
-  margin-top:10px;
-  opacity:0.8;
-  font-size:18px;
+  margin-top:8px;
+  opacity:0.85;
+  font-size:16px;
 }
 
 /* ===== NAV ===== */
 nav{
   background:#14141d;
-  padding:12px;
+  padding:10px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
 }
 
 nav a{
   color:white;
   text-decoration:none;
-  margin:0 20px;
   font-weight:bold;
+  font-size:14px;
 }
 
 /* ===== SECTIONS ===== */
 section{
-  padding:70px 20px;
+  padding:50px 15px;
 }
 
 h2{
-  margin-bottom:35px;
+  margin-bottom:28px;
+  font-size:22px;
 }
 
 /* ===== CARDS ===== */
 .container{
   display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:30px;
+  flex-direction:column;
+  align-items:center;
+  gap:22px;
 }
 
 .card{
   background:#151520;
-  width:300px;
-  padding:22px;
-  border-radius:15px;
-  box-shadow:0 0 20px rgba(106,0,255,0.5);
+  width:100%;
+  max-width:330px;
+  padding:20px;
+  border-radius:14px;
+  box-shadow:0 0 16px rgba(106,0,255,0.45);
   transition:0.3s;
 }
 
 .card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 0 30px rgba(0,195,255,0.7);
+  transform:translateY(-4px);
+  box-shadow:0 0 22px rgba(0,195,255,0.6);
 }
 
+h3{
+  font-size:18px;
+}
+
+p{
+  font-size:14px;
+  opacity:0.85;
+}
+
+/* ===== AUDIO ===== */
 audio{
   width:100%;
   margin-top:12px;
@@ -83,24 +105,42 @@ audio{
 
 /* ===== BUTTON ===== */
 .buy{
-  display:inline-block;
-  margin-top:14px;
-  padding:10px 20px;
+  display:block;
+  margin-top:16px;
+  padding:12px;
   background:linear-gradient(45deg,#6a00ff,#00c3ff);
   color:white;
-  border-radius:8px;
+  border-radius:10px;
   text-decoration:none;
   font-weight:bold;
+  font-size:15px;
 }
 
 /* ===== FOOTER ===== */
 footer{
   background:#14141d;
-  padding:18px;
-  font-size:14px;
+  padding:16px;
+  font-size:13px;
   opacity:0.7;
 }
+
+/* ===== TABLET & DESKTOP ===== */
+@media(min-width:768px){
+  .container{
+    flex-direction:row;
+    justify-content:center;
+  }
+
+  nav a{
+    font-size:15px;
+  }
+
+  h2{
+    font-size:26px;
+  }
+}
 </style>
+
 </head>
 
 <body>
@@ -160,6 +200,7 @@ footer{
 <footer>
   © 2026 Beatora Vibes
 </footer>
+
 
 
 
