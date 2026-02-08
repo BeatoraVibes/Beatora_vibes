@@ -143,6 +143,25 @@ footer{
 
 </head>
 
+<script>
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
+
+  reveals.forEach((el) => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    const revealPoint = 100;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
 <body>
 
 <!-- ===== HEADER WITH YOUR LOGO ===== -->
@@ -158,12 +177,14 @@ footer{
 
 
 <!-- ===== MUSIC SECTION ===== -->
-<section id="music">
+<section id="music" class="reveal">
+
   <h2>🎵 Listen My Music</h2>
 
   <div class="container">
 
-    <div class="card">
+    <div class="card reveal">
+
       <h3>Pal Saath</h3>
       <audio controls>
         <source src="Pal Saath.mp3" type="audio/mpeg">
@@ -176,18 +197,21 @@ footer{
 
 
 <!-- ===== BOOKS SECTION ===== -->
-<section id="books">
+<section id="books" class="reveal">
+
   <h2>📘 Premium eBooks</h2>
 
   <div class="container">
 
-    <div class="card">
+    <div class="card reveal">
+
       <h3>Music Marketing Guide</h3>
       <p>Learn how to grow your music brand</p>
       <a href="PASTE_RAZORPAY_LINK_1" target="_blank" class="buy">Buy ₹99</a>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
+
       <h3>Beat Making Secrets</h3>
       <p>Professional production tips</p>
       <a href="PASTE_RAZORPAY_LINK_2" target="_blank" class="buy">Buy ₹149</a>
@@ -200,6 +224,7 @@ footer{
 <footer>
   © 2026 Beatora Vibes
 </footer>
+
 
 
 
